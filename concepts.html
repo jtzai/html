@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #191970;
+  padding: 30px;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 15%;
+  height: 500px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #9B26B6;
+  height: 500px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #4169E1;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Boot process image styling */
+.boot-image {
+  width: 200px;   /* make images bigger */
+  height: auto;   /* keeps proportions */
+  margin-right: 10px;
+  vertical-align: middle;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Fundamentals of Computing</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <p><a href="index.html">course</a></p>
+      <p><a href="project.html">project</a></p>
+      <p><a href="concepts.html">concepts</a></p>
+      <p><a href="database.html">databases</a></p>
+      <p><a href="documents.html">documentation</a></p>
+      <p><a href="devteam.html">about me</a></p>
+    </ul>
+  </nav>
+  
+  <article>
+    <div style="text-align: left;">
+    </div>
+    <p></p>
+
+    <!-- Interactive Operating System Boot Process -->
+    <div style="text-align:left; margin-top:20px;">
+      <h3>How an Operating System Works</h3>
+      <button id="nextBtn" onclick="nextStep()">Start Boot Process</button>
+      <div id="bootDisplay" style="margin-top:50px; background:#9B26B6; padding:35px; border-radius:5px; min-height:120px;"></div>
+    </div>
+  </article>
+</section>
+
+<script>
+// Boot process steps with image filenames
+const bootSteps = [
+  { text: "🔌 Power On → Hardware runs initial checks (BIOS/UEFI).", img: "poweron.jpg" },
+  { text: "💾 Bootloader loads the operating system kernel into memory.", img: "hardrive.jpg" },
+  { text: "⚙️ Kernel initializes hardware drivers and core system services.", img: "processor.jpg" },
+  { text: "📂 File system is mounted and resources become available.", img: "folder.jpg" },
+  { text: "🖥️ User interface starts (command line or graphical desktop).", img: "monitor.jpg" },
+  { text: "👤 User logs in and applications can now run.", img: "user.jpg" }
+];
+
+let currentStep = 0;
+
+// Function to show next step with image
+function nextStep() {
+  const display = document.getElementById("bootDisplay");
+  const btn = document.getElementById("nextBtn");
+
+  if (currentStep < bootSteps.length) {
+    const step = bootSteps[currentStep];
+    display.innerHTML = `
+      <div style="margin:10px; padding:10px; border:5px solid #ccc; border-radius:5px; background: #4169E1;">
+        <img src="${step.img}" alt="Step image" class="boot-image">
+        <span>${step.text}</span>
+      </div>
+    `;
+    currentStep++;
+
+    if (currentStep < bootSteps.length) {
+      btn.innerText = "Next: " + bootSteps[currentStep].text;
+    } else {
+      btn.innerText = "Finish Boot Process";
+    }
+  } else {
+    display.innerHTML = "<p>✅ Boot process complete! The system is ready.</p>";
+    btn.innerText = "Restart Boot Process";
+    currentStep = 0; // reset so it starts over
+  }
+}
+</script>
+
+<footer>
+  <p>@ Powered by UB</p>
+</footer>
+
+</body>
+</html>
