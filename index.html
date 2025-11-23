@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CSS Template</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(0, 0, 0);
+      margin: 0;
+    }
+
+    header {
+      background-color: rgba(172, 21, 232, 0.409);
+      padding: 10px;
+      text-align: center;
+      font-size: 25px;
+      color: white;
+      height: 150x;
+    }
+    
+    header a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+      text-shadow: 0 0 5px #00ffff;
+    }
+
+    header a:hover {
+      color: #ff00ff;
+      text-decoration: underline;
+    }
+
+    nav {
+      float: left;
+      width: 15%;
+      min-height: 700px;
+      background: transparent;
+      padding: 20px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      font-size: 20px;
+    }
+
+    nav a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+      text-shadow: 0 0 5px #00ffff;
+    }
+
+    nav a:hover {
+      color: #ff00ff;
+      text-decoration: underline;
+    }
+
+    article {
+      float: left;
+      padding: 20px;
+      width: 70%;
+      color: rgb(255, 255, 255);
+      background-color: transparent;
+      min-height: 700px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    article a {
+      color: #093a8a;
+      text-decoration: none;
+      font-weight: bold;
+      text-shadow: 0 0 5px #2600ff;
+      transition: color 0.3s ease;
+    }
+
+    article a:hover {
+      color: #00ffcc;
+      text-decoration: underline;
+    }
+
+    section::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    footer {
+      background-color: #4169e14c;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      nav, article {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    #bg-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url("setyourheartablaze.jpg"); /* your image file */
+      background-size: cover;       /* fill screen */
+      background-position: center;  /* keep centered */
+      background-repeat: no-repeat; /* no tiling */
+      background-attachment: fixed; /* stays in place when scrolling */
+      z-index: -1;                  /* push behind everything */
+    }
+ 
+</style>
+</head>
+<body>
+
+<header>
+ <h2 style="font-family: Cambria, sans-serif; font-size: 50px; font-weight: bold; font-style: italic;">Fundamentals of Computing</h2>
+      <a href="index.html">Course</a>
+      <a href="project.html">Project</a>
+      <a href="concepts.html">Concepts</a>
+      <a href="database.html">Databases</a>
+      <a href="documents.html">Documentation</a>
+      <a href="devteam.html">About Me</a>
+      <a href="resume.html">Resume</a>
+</header>
+<section>
+  <nav>
+    <ul>
+
+    </ul>
+  </nav>
+  
+  <article>
+  <div style="text-align: center;">
+  <img src="FOC.jpeg" alt="FOC"style="width:505px;height:182px;">
+  <div id="bg-image"></div> 
+ </div>
+	 <p> This course is an introduction to the fundamentals of Computer Science that will provide students with a foundation for future courses in Computer Science. The course is a broad survey of the discipline through topics that allow students to understand the capabilities of computer systems in terms of: the computer architecture; operating systems and computer networks; software and software development; data organization and visualization; and the potential of computing machines.</p>
+ 
+  </article>
+</section>
+
+<footer>
+  <p>@ Powered by UB</p>
+</footer>
+
+</body>
+</html>

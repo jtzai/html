@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CSS Template</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(0, 0, 0);
+      margin: 0;
+    }
+    header {
+      background-color: rgba(172, 21, 232, 0.409);
+      padding: 10px;
+      text-align: center;
+      font-size: 25px;
+      color: white;
+      height: 150x;
+    }
+    
+    header a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+      text-shadow: 0 0 5px #00ffff;
+    }
+
+    header a:hover {
+      color: #ff00ff;
+      text-decoration: underline;
+    }
+
+    nav {
+      float: left;
+      width: 15%;
+      min-height: 700px;
+      background: transparent;
+      padding: 20px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      font-size: 20px;
+    }
+
+    nav a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+      text-shadow: 0 0 5px #00ffff;
+    }
+
+    nav a:hover {
+      color: #ff00ff;
+      text-decoration: underline;
+    }
+
+   article {
+      float: left;
+      padding: 20px;
+      width: 70%;
+      color: rgb(255, 255, 255);
+      background-color: transparent;
+      min-height: 700px;
+      font-size: 20px;
+    }
+
+    article a {
+      color: #000000;
+      text-decoration: none;
+      font-weight: bold;
+      text-shadow: 0 0 5px #6cc0fd;
+      transition: color 0.3s ease;
+    }
+
+    article a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    section::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    footer {
+      background-color: #4169e14c;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      nav, article {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    #bg-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url("gold.jpg"); /* your image file */
+      background-size: cover;       /* fill screen */
+      background-position: center;  /* keep centered */
+      background-repeat: no-repeat; /* no tiling */
+      background-attachment: fixed; /* stays in place when scrolling */
+      z-index: -1;                  /* push behind everything */
+    }
+  </style>
+</head>
+<body>
+
+<header>
+ <h2 style="font-family: Cambria, sans-serif; font-size: 50px; font-weight: bold; font-style: italic;">Fundamentals of Computing</h2>
+      <a href="index.html">Course</a>
+      <a href="project.html">Project</a>
+      <a href="concepts.html">Concepts</a>
+      <a href="database.html">Databases</a>
+      <a href="documents.html">Documentation</a>
+      <a href="devteam.html">About Me</a>
+      <a href="resume.html">Resume</a>
+</header>
+
+<section>
+  <nav>
+    <ul>
+
+    </ul>
+  </nav>
+  <article>
+    <div style="text-align: center;">
+      <img src="FOC.jpeg" alt="FOC" style="width:505px;height:182px;">
+     <div id="bg-image"></div> 
+    </div>
+
+    <h1>Project</h1>
+    <p>
+      The final project consists of four sections, each with its own deadline. The full project description can be found on the course Moodle site. Students are required to build a website using HTML, CSS, and JavaScript, hosted on GitHub. This project serves as a benchmark for the final assessment.
+    </p>
+
+    <ul>
+      <li><a href="https://kryanbz.github.io/FoC/notgate.html" target="_blank">Project 1: NOT Gate</a></li> <br>
+      <li><a href="https://kryanbz.github.io/FoC/andgate.html" target="_blank">Project 2: AND Gate</a></li> <br>
+      <li><a href="https://kryanbz.github.io/FoC/easyand.html" target="_blank">Project 2: AND Gate (Easy Version)</a></li> <br>
+      <li><a href="https://kryanbz.github.io/FoC/binarytohex.html" target="_blank">Project 3: Binary to Hexadecimal Converter</a></li> <br>
+      <li><a href="https://kryanbz.github.io/FoC/ascii.html" target="_blank">Project 4: ASCII Converter</a></li> <br>
+      <li><a href="https://kryanbz.github.io/FoC/unicode.html" target="_blank">Project 4: UNICODE Converter</a></li> <br>
+      <li><a href="https://kryanbz.github.io/FoC/MLinstructions.html" target="_blank">Project 5: Machine Language Instructions Converter</a></li> <br>
+    </ul>
+  </article>
+</section>
+
+<footer>
+  <p>@ Powered by UB</p>
+</footer>
+
+</body>
+</html>
+
