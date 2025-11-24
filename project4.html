@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FoC</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+img {
+  float: left;
+ padding-right: 40px; 
+ padding-left: 40px;
+ padding-bottom: 40px;
+ 
+}
+ body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(84, 0, 194);
+      margin: 0;
+      color: white;
+    }
+</style>
+</head>
+<body>
+
+<section>
+<h2>Project 4: Binary to Hexidecimal</h2>
+<hr>	
+
+
+<p><img src="bintohex.jpg"></p>
+        
+			
+         
+<input type="number" id="inputBin" value="">
+
+<p>Enter any 4 digit binary number:</p>
+
+<button onclick="binToHex()">Submit</button>
+
+<p>Hexidecimal Value : </p>
+<p id="demo"></p>
+
+<script>
+function binToHex() {
+  var x = document.getElementById("inputBin").value;
+  var hexOut = parseInt(x , 2).toString(16).toUpperCase();
+  document.getElementById("demo").innerHTML = hexOut;
+  }
+</script>
+
+
+
+</section>
+
+
+<a href="project.html">Back to Projects</a></h3>
+
+<footer>
+  <p>@ Powered by UB</p>
+</footer>
+
+</body>
+</html>

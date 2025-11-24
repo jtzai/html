@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Style the header */
+    header {
+      background-color: rgba(172, 21, 232, 0.409);
+      padding: 10px;
+      text-align: center;
+      font-size: 25px;
+      color: white;
+      height: 150x;
+    }
+    
+    header a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+      text-shadow: 0 0 5px #00ffff;
+    }
+
+    header a:hover {
+      color: #ff00ff;
+      text-decoration: underline;
+    }
+    nav {
+      float: left;
+      width: 15%;
+      min-height: 700px;
+      background: transparent;
+      padding: 20px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      font-size: 20px;
+    }
+
+    nav a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+      text-shadow: 0 0 5px #00ffff;
+    }
+
+    nav a:hover {
+      color: #ff00ff;
+      text-decoration: underline;
+    }
+
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  color: rgba(0, 0, 0, 0.902);
+  font: weight 500px;
+  background-color: transparent;
+  height: 700px; /* only for demonstration, should be removed */
+  font-size: 20px;
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #4169e14c;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+    #bg-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url("sky2.jpg"); /* your image file */
+      background-size: cover;       /* fill screen */
+      background-position: center;  /* keep centered */
+      background-repeat: no-repeat; /* no tiling */
+      background-attachment: fixed; /* stays in place when scrolling */
+      z-index: -1;                  /* push behind everything */
+    }
+    /* Canvas */
+    #canvas {
+      width: 500px;
+      height: 300px;
+      border: 2px solid black;
+      margin: 20px auto;
+      position: relative;
+      background: black;
+      color: black;
+    }
+
+    .dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: purple;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+    }
+
+    .box {
+      position: absolute;
+      width: 120px;
+      height: 60px;
+      border: 1px solid #333;
+      border-radius: 6px;
+      background: #eee;
+      font-size: 12px;
+      padding: 4px;
+      text-align: center;
+      display: none;
+      opacity: 0;
+      transition: opacity 250ms ease;
+    }
+    .box.visible { display: block; opacity: 1; }
+
+    /* Centered step display over active box */
+#stepDisplay {
+  position: absolute;
+  width: 220px;
+  padding: 8px;
+  background: #8e0303;
+  border: 2px solid #333;
+  border-radius: 8px;
+  font-size: 15px;
+  text-align: center;
+  display: none;
+  opacity: 0;
+  transition: opacity 250ms ease;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+    #stepDisplay.visible { display: block; opacity: 1; }
+
+    #stepTitle { font-weight: bold; margin-bottom: 6px; }
+    #stepText { margin-bottom: 6px; }
+    #stepImage {
+      width: 200px;
+      height: 200px;
+      border-radius: 6px;
+      border: 1px solid #333;
+    }
+
+    /* Controls */
+    .controls { text-align: center; }
+    .controls button {
+      margin: 5px;
+      padding: 8px 12px;
+      font-size: 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .controls button:hover { background-color: #ddd; color: black; }
+
+    /* Long definition */
+    #longDefinition {
+      margin-top: 16px;
+      font-size: 19px;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.4;
+      min-height: 48px;
+      font-weight: bold;
+    }
+
+    #status {
+      margin-top: 8px;
+      font-weight: bold;
+      color: rgb(23, 132, 174);
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+ <h2 style="font-family: Cambria, sans-serif; font-size: 50px; font-weight: bold; font-style: italic;">Fundamentals of Computing</h2>
+      <a href="project.html">- Project </a>
+</header>
+
+<section>
+  <nav>
+    <ul>
+
+    </ul>
+  </nav>
+  <article>
+    <h3 style="text-align:center;">Computer Boot Process</h3>
+      <div id="bg-image"></div> 
+
+    <div style="text-align:center"; id="canvas">
+
+      <div id="box1" class="box" style="left:20px; top:20px;">ROM<br>(Boot Loader)</div>
+      <div id="box2" class="box" style="left:200px; top:20px;">Disk<br>(OS stored)</div>
+      <div id="box3" class="box" style="left:200px; top:120px;">RAM<br>(Main Memory)</div>
+      <div id="box4" class="box" style="left:380px; top:20px;">Kernel<br>(OS Core)</div>
+      <div id="box5" class="box" style="left:380px; top:120px;">User Apps</div>
+
+      <div class="dot" id="dot"></div>
+
+      <div id="stepDisplay">
+        <div id="stepTitle"></div>
+        <div id="stepText"></div>
+        <img id="stepImage" src="" alt="Step image">
+      </div>
+    </div>
+
+    <div class="controls">
+      <button onclick="step1()">Step 1: Power On</button>
+      <button onclick="step2()">Step 2: Load OS</button>
+      <button onclick="step3()">Step 3: Copy to RAM</button>
+      <button onclick="step4()">Step 4: Kernel Control</button>
+      <button onclick="step5()">Step 5: User Apps</button>
+      <button onclick="nextStep()">Next Step</button>
+      <button onclick="resetDemo()">Reset</button>
+
+      <div id="longDefinition"></div>
+      <div id="status">Idle</div>
+    </div>
+  </article>
+</section>
+
+<footer>
+  <p>@ Powered by UB</p>
+</footer>
+
+<script>
+  const dot = document.getElementById("dot");
+  const status = document.getElementById("status");
+  const stepDisplay = document.getElementById("stepDisplay");
+  const stepTitle = document.getElementById("stepTitle");
+  const stepText = document.getElementById("stepText");
+  const stepImage = document.getElementById("stepImage");
+  const longDefinition = document.getElementById("longDefinition");
+  let currentStep = 0;
+  const OFFSET = 10;
+
+  function place(x, y) {
+    dot.style.left = x + "px";
+    dot.style.top = y + "px";
+  }
+
+  function showBoxes(upTo) {
+    for (let i = 1; i <= 5; i++) {
+      const box = document.getElementById("box" + i);
+      if (i <= upTo) {
+        box.classList.add("visible");
+      } else {
+        box.classList.remove("visible");
+        box.style.display = "none";
+        box.style.opacity = "0";
+      }
+    }
+  }
+
+  function positionDisplayOverBox(boxId) {
+    const box = document.getElementById(boxId);
+    const centerX = box.offsetLeft + box.offsetWidth / 2;
+    const top = box.offsetTop + box.offsetHeight + OFFSET;
+    // Ensure width is measured before centering
+    stepDisplay.style.display = "block";
+    const displayWidth = stepDisplay.offsetWidth || 220;
+    stepDisplay.style.left = (centerX - displayWidth / 2) + "px";
+    stepDisplay.style.top = top + "px";
+  }
+
+function showStep(title, shortText, longText, imageUrl, boxId) {
+  const box = document.getElementById(boxId);
+  const top = box.offsetTop + box.offsetHeight + OFFSET;
+
+  stepTitle.textContent = title;
+  stepText.textContent = shortText;
+  stepImage.src = imageUrl;
+
+  // Center horizontally in canvas
+  stepDisplay.style.left = "50%";
+  stepDisplay.style.transform = "translateX(-50%)";
+  stepDisplay.style.top = top + "px";
+
+  stepDisplay.classList.remove("visible");
+  stepDisplay.style.display = "block";
+  void stepDisplay.offsetWidth;
+  stepDisplay.classList.add("visible");
+
+  longDefinition.textContent = longText;
+}
+
+
+  function step1() {
+    status.textContent = "Step 1: Power on → CPU runs boot loader in ROM";
+    place(40, 40);
+    showBoxes(1);
+    showStep(
+      "ROM (Boot Loader)",
+      "CPU runs boot loader in ROM",
+      "The computer receives power and the CPU immediately begins executing instructions stored in ROM. These instructions form the boot loader, which is responsible for starting the boot process and preparing the system to load the operating system.",
+      "rom.jpg",
+      "box1"
+    );
+    currentStep = 1;
+  }
+
+  function step2() {
+    status.textContent = "Step 2: Boot loader finds OS on disk";
+    place(240, 40);
+    showBoxes(2);
+    showStep(
+      "Disk (OS stored)",
+      "Boot loader finds OS on disk",
+      "The boot loader searches connected storage devices (like hard drives or SSDs) to locate the operating system files. Once found, it begins loading the OS into memory so the system can initialize.",
+      "disk.jpg",
+      "box2"
+    );
+    currentStep = 2;
+  }
+
+  function step3() {
+    status.textContent = "Step 3: OS copied into RAM";
+    place(240, 140);
+    showBoxes(3);
+    showStep(
+      "RAM (Main Memory)",
+      "OS copied into RAM",
+      "The operating system is copied from the disk into RAM (main memory), where it can be accessed quickly by the CPU. This step ensures the OS is ready to run efficiently and manage system resources.",
+      "ram.jpg",
+      "box3"
+    );
+    currentStep = 3;
+  }
+
+  function step4() {
+    status.textContent = "Step 4: Kernel takes control of CPU";
+    place(400, 40);
+    showBoxes(4);
+    showStep(
+      "Kernel (OS Core)",
+      "Kernel takes control of CPU",
+      "The kernel, which is the core part of the operating system, takes control of the CPU. It begins managing hardware, memory, processes, and system calls, laying the foundation for everything else.",
+      "kernel.jpg",
+      "box4"
+    );
+    currentStep = 4;
+  }
+
+  function step5() {
+    status.textContent = "Step 5: System ready → user apps can run";
+    place(400, 140);
+    showBoxes(5);
+    showStep(
+      "User Apps",
+      "System ready — user apps can run",
+      "With the kernel running, the system is now ready for user-level applications. Programs like browsers, games, and productivity tools can launch, and the computer is fully operational.",
+      "userapps.jpg",
+      "box5"
+    );
+    currentStep = 5;
+  }
+
+  function nextStep() {
+    if (currentStep === 0) step1();
+    else if (currentStep === 1) step2();
+    else if (currentStep === 2) step3();
+    else if (currentStep === 3) step4();
+    else if (currentStep === 4) step5();
+  }
+
+  function resetDemo() {
+    status.textContent = "Idle";
+    place(10, 10);
+    stepDisplay.classList.remove("visible");
+    stepDisplay.style.display = "none";
+    longDefinition.textContent = "";
+    showBoxes(0);
+    currentStep = 0;
+  }
+
+  // Initialize
+  resetDemo();
+</script>
+
+</body>
+</html>

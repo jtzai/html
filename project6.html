@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FoC</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+ body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(145, 144, 152);
+      margin: 0;
+      color: white;
+    }
+    body a{
+        color: black;
+    }
+</style>
+</head>
+<body>
+
+<section>
+<h2>Project 6: UNICODE</h2>
+<hr>
+
+<center>
+<p>Please input UNICODE number:</p>
+
+<input id="numb" type="text">
+
+<button type="button" onclick="myFunction()">Submit</button>
+<br>
+<table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+ 
+  <tr>
+    <th><center><p id="demo"></center></p></th>
+  </tr>
+  
+</table>
+
+
+<p><img src="uni1.jpg" style="width:700px;height:400px;"></p>
+<p><img src="uni3.jpg" style="width:700px;height:400px;"></p>        
+<p><img src="uni4.jpg" style="width:700px;height:400px;"></p>  			
+
+<p></p>
+<p></p>         
+
+<br>
+
+
+</center>
+
+<script>
+function myFunction() {
+  var x, text;
+
+  // Get the value of the input field with id="numb"
+  x = document.getElementById("numb").value;
+
+  
+    text = x;
+    unicode = ("&#x" + x)
+  
+  document.getElementById("demo").innerHTML = unicode;
+}
+</script>
+
+
+</section>
+
+
+<a href="project.html">Back to Projects</a></h3>
+
+<footer>
+  <p>@ Powered by UB</p>
+</footer>
+
+</body>
+</html>
