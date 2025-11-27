@@ -1,131 +1,173 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Resume</title>
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
 
-.shadowbox {
-  width: 21cm;
-        height: 29.7cm;
-        margin: 30mm 45mm 30mm 45mm; 
-  border: 1px solid #333;
-  box-shadow: 8px 8px 5px #444;
-  padding: 48px 60px;
-  background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
-}
+    <style>
+        body {
+            background-color: #0b0014;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #eee;
+        }
 
+        h2 {
+            text-align: left;
+            margin: 0;
+            font-size: 32px;
+            color: purple;
+            letter-spacing: 1px;
+            font-weight: bold;
+            text-shadow: 0 0 4px rgba(6, 46, 223, 0.5);
+        }
 
-img {
-  float: right;
-}
+        .resume-container {
+            background: #ffffff;
+            width: 65%;
+            margin: 40px auto;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+            color: #1a1a1a;
+        }
 
-#name {
-  display: inline;
-  font-size: large;
-  font-weight: bold;
+        h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 32px;
+            color: black;
+            letter-spacing: 1px;
+            font-weight: bold;
+            text-shadow: 4px 4px 4px brown;
+        }
 
-}
+        .contact {
+            text-align: center;
+            margin-top: 8px;
+            font-size: 14px;
+            color: #333;
+        }
 
-#contact {
-  display: inline;
-}
+        .section-title {
+            margin-top: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            color: brown;
+            border-left: 5px solid #000000;
+            padding-left: 10px;
+            text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+        }
 
-.column {
-  float: left;
-  width: 35%;
-  padding: 10px;
- 
-}
+        .entry-title {
+            font-weight: bold;
+            margin-top: 10px;
+            color: #000000;
+        }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+        ul {
+            margin: 5px 0 15px 20px;
+        }
 
+        li {
+            margin-bottom: 5px;
+        }
+
+        .github-link a {
+            color: #000000;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .github-link a:hover {
+            text-decoration: underline;
+        }
+        
     nav a {
-      color: #002d9e;
+      color: #eb3c01;
       text-decoration: none;
       font-weight: bold;
-      text-shadow: 0 0 5px #000000;
-      font-size: 40px;
+      text-shadow: 0 0 5px #ffffff;
+      font-size: 30px;
     }
 
     nav a:hover {
-      color: #3e0404;
+      color: #0996c9;
       text-decoration: underline;
     }
-</style>
-  <nav>
+    </style>
+</head>
+
+<body>
+    <nav>
     <ul>
 <a href="index.html"> <- Back to Course</a>
     </ul>
   </nav>
 
-</head>
-<body>
-<div class="shadowbox">
-<img src="me.jpg" alt="me"><br>
-<p id="name">Jeremy Tzib</p><br>
-<p id="contact">Blue Bird Avenue<br>
- San Ignacio Town, Cayo, Belize<br>
-   654 - 6686<br>
-   jeremytzib@gmail.com</p>
+    <div class="resume-container">
 
-<h3>OBJECTIVE:</h3>
-<p>To acquire valuable knowledge and skills to complement
-those that I have learned from school in an actual job environment.
-In return, I ofer my service and determination to be an asset to your 
-company throught the duration of my employment.</p>
-<h3>EDUCATION:</h3>
+        <h1>Jeremy Tzib</h1>
 
-<div class="row">
-  <div class="column">
-    
-<p>2025 - Present University of Belize <br> 
-<p>2021 - 2025 Sacred Heart College <br> 
-<p>2012 - 2020 Sacred Heart Primary School </p>
-  </div>
-  <div class="column">
-    <h3></h3>
-    <p> Information Technology <br></p>
-    <p> Business <br></p>
+        <p class="contact">
+            Email: jeremytzib@gmail.com | Phone: (501) 656-6686 <br>
+            Location: San Ignacio Town, Cayo, Belize
+        </p>
 
-  </div>
-</div>
+        <h2 class="section-title">Profile</h2>
+        <p>
+            Passionate about work and focused on being a valuable asset.
+            Always ready to overcome challenges and contribute to the best of my ability.
+        </p>
 
+        <h2 class="section-title">Work Experience</h2>
 
-<h3>PRACTICAL EXPERIENCE:</h3>
-<p>Aug 20 - Nov 26 University of Belize Hackathon Practical Experience.
-Final Project Our Lady of Guadalupe Primary School Website.</p>
-<h3>SKILLS</h3>
-<ul>
-    <li>Web Development:
-        <ul><br>
-            <li>HTML</li>
-            <li>CSS</li>
-			<li>JavaScript</li>
-			<li>GitHub</li>
-			<li>Node JS</li>
-			<li>Vue JS</li>
-			<li>Quasar</li>
-			<li>Google Firebase Hosting</li>
-        </ul>
-    </li><br>
-    <li>Programming:</li>
-	 <ul><br>
-            
-			<li>C++</li>
-			<li>JavaScript</li>
-			<li>Python</li>
-			
-        </ul>
-</ul>
-<h3>REFERENCE:</h3>
-<p>Dr. Kieran Ryan University of Belize 610-6666 <br>
-   Mr. Augustine Lloyd University of Belize 822-3680<br>
-   Mr. Alvin Medina Sacred Heart College 612-6766</p>
-</div>
+        <p class="entry-title">Principal Assistant</p>
+        <ul>
+            <li>St. Andrews Anglican School</li>
+            <li>Filing</li>
+            <li>Sorting Student Grades</li>
+            <li>Answering Phone calls</li>
+            <li>Running Errands</li>
+
+            <h2 class="section-title">Education</h2>
+
+            <p class="entry-title">2021 - 2025 Sacred Heart College</p>
+            <ul>
+                <li>Business Diploma</li>
+            </ul>
+
+            <p class="entry-title">2012 - 2020 Sacred Heart Primary</p>
+            <ul>
+                <li>Primary School Diploma</li>
+            </ul>
+
+            <h2 class="section-title">Skills</h2>
+            <ul>
+                <li>Time-Management</li>
+                <li>Cooperational Skills</li>
+                <li>Organizing Skills</li>
+                <li>Analyzation Skills</li>
+            </ul>
+
+            <h2 class="section-title">GitHub</h2>
+            <p class="github-link">
+                GitHub: <a href="https://github.com/jtzai?tab=repositories"
+                    target="_blank">https://github.com/jtzai?tab=repositories</a>
+            </p>
+
+            <h2 class="section-title">References</h2>
+            <ul>
+                <li>(1) Ms. Reann Palacio POB Teacher. #1 Joseph Andrews Drive San Ignacio Town, Belize. Cell Number:
+                    824-2102 or 824-275. Email: rpalacio@shc.edu.bz </li> <br>              
+                <li>(2) Mr. Alvin Medina IT Teacher. #1#1 Joseph Andrews Drive San Ignacio Town, Belize. Cell Number: 
+                    812-3786. Email: amedina@shc.edu.bz</li> <br>
+            </ul>
+
+    </div>
+
 </body>
 </html>
